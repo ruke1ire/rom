@@ -1,8 +1,0 @@
-*
-
-!after/
-!after/**
-
-!coc-settings.json
-!init.vim
-!.gitignore
