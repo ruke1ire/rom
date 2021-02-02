@@ -135,3 +135,9 @@ export PATH=$PATH:/usr/local/nodejs/bin
 
 #env setup for snapd
 PATH=$PATH:/snap/bin
+
+#ros alias
+alias source_ros="source /opt/ros/foxy/local_setup.bash"
+
+#tree alias
+alias t="tree"
