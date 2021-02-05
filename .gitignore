@@ -2,7 +2,7 @@
 
 !.bashrc
 !.tmux.conf
-!.pylintrc
+!notes.md
 
 !.config/
 
@@ -12,3 +12,4 @@
 .config/nvim/plugged
 
 !.gitignore
+
