@@ -15,6 +15,8 @@ set noswapfile
 set nohlsearch
 "set nowrap
 set autochdir
+set ignorecase
+set smartcase
 
 call plug#begin('~/.config/nvim/plugged')
 
