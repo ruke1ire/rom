@@ -33,7 +33,7 @@ call plug#end()
 
 autocmd StdinReadPre * let s:std_in=1
 "automatically start nerd tree when no file has been specified
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "automatically starts nerdtree upon start
 "autocmd vimenter * NERDTreeFind
 "close nerdtree if it's the only window left
@@ -75,11 +75,12 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>v :NERDTreeFind<CR>
 nnoremap <leader>n :tabnext<CR>
 nnoremap <leader>p :tabprev<CR>
-nnoremap <leader>w :update<CR>
+nnoremap <leader>w :write<CR>
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>F :Files ~<CR>
 nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>s :Lines<CR>
 
 " coc
 " TextEdit might fail if hidden is not set.
