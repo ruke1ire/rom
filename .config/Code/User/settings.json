@@ -1,0 +1,14 @@
+{
+    "git.enableSmartCommit": true,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.editor.enablePreview": false,
+    "jupyter.alwaysTrustNotebooks": true,
+    "vim.useSystemClipboard": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.leader": " ",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
+}

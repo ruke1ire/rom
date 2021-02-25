@@ -11,5 +11,9 @@
 !.config/nvim/*
 .config/nvim/plugged
 
+!.config/Code
+!.config/Code/User
+!.config/Code/User/settings.json
+
 !.gitignore
 
