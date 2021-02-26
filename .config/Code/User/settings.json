@@ -11,4 +11,5 @@
     "vim.leader": " ",
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
+    "jupyter.askForKernelRestart": false,
 }
