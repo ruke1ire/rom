@@ -38,6 +38,18 @@ lua << EOF
 -- your lua code here
 require("nvim-lsp-installer").setup {}
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.clangd.setup{}
+require'lspconfig'.arduino_language_server.setup{}
+require'lspconfig'.cmake.setup{}
+require'lspconfig'.cssls.setup{}
+require'lspconfig'.dockerls.setup{}
+require'lspconfig'.html.setup{}
+require'lspconfig'.jsonls.setup{}
+require'lspconfig'.ltex.setup{}
+require'lspconfig'.prosemd_lsp.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.vimls.setup{}
+require'lspconfig'.yamlls.setup{}
 EOF
 
 autocmd StdinReadPre * let s:std_in=1
