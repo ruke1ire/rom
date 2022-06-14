@@ -20,6 +20,7 @@ set smartcase
 set scrolloff=8
 set relativenumber
 set hidden
+set signcolumn=yes
 
 call plug#begin('~/.config/nvim/plugged')
 
