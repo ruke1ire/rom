@@ -38,6 +38,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
 call plug#end()
 
 "lua nvim-lsp
