@@ -1,8 +1,9 @@
 *
 
-!.bashrc
+!append_to_bashrc.sh
+!append_to_zshrc.sh
+!config_*
 !.tmux.conf
-!notes.md
 
 !.config/
 
@@ -17,4 +18,3 @@
 !.config/Code/User/keybindings.json
 
 !.gitignore
-
