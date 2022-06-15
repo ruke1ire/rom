@@ -12,3 +12,5 @@ set selection-clipboard clipboard
 set window-width 840
 set window-height 1080
 map = adjust_window width
+map l navigate next
+map h navigate previous
