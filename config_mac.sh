@@ -12,3 +12,5 @@ echo "------------------>Appending zshrc with tmux and style configuration"
 cat append_to_zshrc.sh >> $HOME/.zshrc
 echo "------------------>Linking VSCode configuration"
 ln -sv $(pwd)/.config/Code $CONFIG
+echo "------------------>Linking zathura configuration"
+ln -sv $(pwd)/.config/zathura $CONFIG
