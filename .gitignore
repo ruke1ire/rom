@@ -17,4 +17,8 @@
 !.config/Code/User/settings.json
 !.config/Code/User/keybindings.json
 
+.config/*
+!.config/zathura
+!.config/zathura/*
+
 !.gitignore

@@ -1,0 +1,14 @@
+set default-bg "#DDDDDD"
+set inputbar-bg "#DDDDDD"
+set inputbar-fg "#000000"
+set statusbar-bg "#EEEEEE"
+set statusbar-fg "#000000"
+set font "monospace normal 12"
+set adjust-open "width"
+set highlight-color "#FFFF00"
+set highlight-active-color "#00FF00"
+set search-hadjust false
+set selection-clipboard clipboard
+set window-width 840
+set window-height 1080
+map = adjust_window width
