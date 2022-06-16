@@ -1,3 +1,4 @@
+
 set shiftwidth=4
 set expandtab
 set smartindent
@@ -18,7 +19,7 @@ set noswapfile
 set ignorecase
 set smartcase
 set scrolloff=12
-set relativenumber
+"set relativenumber
 set hidden
 set signcolumn=yes
 
@@ -39,6 +40,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
+Plug 'ggandor/lightspeed.nvim'
 call plug#end()
 
 "lua nvim-lsp
@@ -271,3 +273,4 @@ nnoremap K <cmd>lua vim.lsp.buf.hover()<cr>
 nnoremap <c-k> <cmd>lua vim.lsp.buf.signature_help()<cr>
 nnoremap <leader>af <cmd>lua vim.lsp.buf.code_action()<cr>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
+noremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
