@@ -2,7 +2,7 @@
 if [ "$TMUX" = "" ]; then tmux attach || tmux new; fi
 
 # prompt
-PS1=' %~$ '
+PROMPT='%F{green}● %F{white}%~%f%F{226}￥%f '
 
 # colored ls
 alias ls='ls -G'
