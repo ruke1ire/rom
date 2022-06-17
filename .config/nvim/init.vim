@@ -1,4 +1,3 @@
-
 set shiftwidth=4
 set expandtab
 set smartindent
@@ -188,6 +187,25 @@ require('telescope').setup{
   }
 }
 
+require'lightspeed'.setup {
+  ignore_case = true,
+  exit_after_idle_msecs = { unlabeled = 1000, labeled = nil },
+  --- s/x ---
+  jump_to_unique_chars = { safety_timeout = 400 },
+  match_only_the_start_of_same_char_seqs = true,
+  force_beacons_into_match_width = false,
+  -- Display characters in a custom way in the highlighted matches.
+  substitute_chars = { ['\r'] = '¬', },
+  --- f/t ---
+  limit_ft_matches = 8,
+  repeat_ft_with_target_char = false,
+}
+
+vim.api.nvim_set_keymap('n', 'm', '<Plug>Lightspeed_s', {})
+vim.api.nvim_set_keymap('n', 'M', '<Plug>Lightspeed_S', {})
+
+vim.cmd('unmap s')
+vim.cmd('unmap S')
 EOF
 
 autocmd StdinReadPre * let s:std_in=1
@@ -255,4 +273,3 @@ nnoremap K <cmd>lua vim.lsp.buf.hover()<cr>
 nnoremap <c-k> <cmd>lua vim.lsp.buf.signature_help()<cr>
 nnoremap <leader>af <cmd>lua vim.lsp.buf.code_action()<cr>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
-noremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
