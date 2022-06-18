@@ -14,7 +14,6 @@ set mouse=a
 set noswapfile
 "set nohlsearch
 "set nowrap
-"set autochdir
 set ignorecase
 set smartcase
 set scrolloff=8
