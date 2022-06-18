@@ -17,10 +17,22 @@ set noswapfile
 "set autochdir
 set ignorecase
 set smartcase
-set scrolloff=12
+set scrolloff=8
 "set relativenumber
 set hidden
 set signcolumn=yes
+set guifont=Comic\ Code:h15
+
+let s:guifontsize=16
+let s:guifont="Comic\\ Code"
+
+function! AdjustFontSize(amount)
+    let s:guifontsize = s:guifontsize + a:amount
+    execute "set guifont=" .. s:guifont .. ":h" .. s:guifontsize
+endfunction
+
+nnoremap <C-+> <cmd>call AdjustFontSize(+1)<cr>
+nnoremap <C--> <cmd>call AdjustFontSize(-1)<cr>
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -206,6 +218,7 @@ vim.api.nvim_set_keymap('n', 'M', '<Plug>Lightspeed_S', {})
 
 vim.cmd('unmap s')
 vim.cmd('unmap S')
+
 EOF
 
 autocmd StdinReadPre * let s:std_in=1
