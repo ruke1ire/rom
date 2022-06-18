@@ -21,6 +21,7 @@ set scrolloff=8
 "set relativenumber
 set hidden
 set signcolumn=yes
+set autochdir
 set guifont=Comic\ Code:h15
 
 let s:guifontsize=16
