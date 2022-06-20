@@ -3,7 +3,6 @@ set expandtab
 set smartindent
 set smartcase
 set incsearch
-"set colorcolumn=80
 set number
 set statusline+=\ %t%m
 set clipboard=unnamedplus
@@ -12,15 +11,13 @@ set breakindent
 set cursorline
 set mouse=a
 set noswapfile
-"set nohlsearch
-"set nowrap
 set ignorecase
 set smartcase
 set scrolloff=8
-"set relativenumber
 set hidden
 set signcolumn=yes
 set autochdir
+set nonumber
 set guifont=Comic\ Code:h15
 
 let s:guifontsize=16
@@ -164,6 +161,13 @@ require'lspconfig'.yamlls.setup{
     capabilities = capabilities,
 }
 
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false
+    }
+)
+
 local actions = require("telescope.actions")
 
 require('telescope').setup{
@@ -201,7 +205,7 @@ require('telescope').setup{
 
 require'lightspeed'.setup {
   ignore_case = true,
-  exit_after_idle_msecs = { unlabeled = 1000, labeled = nil },
+  exit_after_idle_msecs = { unlabeled = 1000, labeled = 1500 },
   --- s/x ---
   jump_to_unique_chars = { safety_timeout = 400 },
   match_only_the_start_of_same_char_seqs = true,
@@ -212,6 +216,12 @@ require'lightspeed'.setup {
   limit_ft_matches = 8,
   repeat_ft_with_target_char = false,
 }
+
+require('scrollview').setup({
+  excluded_filetypes = {'nerdtree'},
+  current_only = true,
+  winblend = 80,
+})
 
 vim.api.nvim_set_keymap('n', 'm', '<Plug>Lightspeed_s', {})
 vim.api.nvim_set_keymap('n', 'M', '<Plug>Lightspeed_S', {})
@@ -286,3 +296,4 @@ nnoremap K <cmd>lua vim.lsp.buf.hover()<cr>
 nnoremap <c-k> <cmd>lua vim.lsp.buf.signature_help()<cr>
 nnoremap <leader>af <cmd>lua vim.lsp.buf.code_action()<cr>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
+nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<cr>
