@@ -246,7 +246,7 @@ colorscheme gruvbox
 "setting things to be transparent
 "hi Normal guibg=NONE ctermbg=NONE
 "highlight clear LineNr
-"highlight clear SignColumn
+highlight clear SignColumn
 "hi StatusLine ctermbg=NONE cterm=NONE
 
 "let &showbreak='->'
