@@ -18,7 +18,7 @@ set hidden
 set signcolumn=yes
 set autochdir
 set nonumber
-set guifont=Comic\ Code:h15
+set guifont=Comic\ Code:h16
 
 let s:guifontsize=16
 let s:guifont="Comic\\ Code"
@@ -211,7 +211,9 @@ require'lightspeed'.setup {
   match_only_the_start_of_same_char_seqs = true,
   force_beacons_into_match_width = false,
   -- Display characters in a custom way in the highlighted matches.
-  substitute_chars = { ['\r'] = '¬', },
+  substitute_chars = { 
+      ['\r'] = '¬', 
+      },
   --- f/t ---
   limit_ft_matches = 8,
   repeat_ft_with_target_char = false,
@@ -242,7 +244,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 colorscheme gruvbox
 
 "setting things to be transparent
-hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
 "highlight clear LineNr
 "highlight clear SignColumn
 "hi StatusLine ctermbg=NONE cterm=NONE
