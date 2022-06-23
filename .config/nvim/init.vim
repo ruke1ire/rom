@@ -16,8 +16,9 @@ set smartcase
 set scrolloff=8
 set hidden
 set signcolumn=yes
-set autochdir
+"set autochdir
 set nonumber
+set splitright
 set guifont=Comic\ Code:h16
 
 let s:guifontsize=16
@@ -205,7 +206,7 @@ require('telescope').setup{
 
 require'lightspeed'.setup {
   ignore_case = true,
-  exit_after_idle_msecs = { unlabeled = 1000, labeled = 1500 },
+  exit_after_idle_msecs = { unlabeled = 1000, labeled = 2000 },
   --- s/x ---
   jump_to_unique_chars = { safety_timeout = 400 },
   match_only_the_start_of_same_char_seqs = true,
@@ -299,3 +300,7 @@ nnoremap <c-k> <cmd>lua vim.lsp.buf.signature_help()<cr>
 nnoremap <leader>af <cmd>lua vim.lsp.buf.code_action()<cr>
 nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<cr>
 nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<cr>
+
+" For :terminal
+tnoremap <Esc> <C-\><C-n>
+map <leader>T :vsplit \| terminal<cr>
