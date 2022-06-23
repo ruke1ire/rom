@@ -16,7 +16,7 @@ set smartcase
 set scrolloff=8
 set hidden
 set signcolumn=yes
-"set autochdir
+set autochdir
 set nonumber
 set splitright
 set guifont=Comic\ Code:h16
