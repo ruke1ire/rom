@@ -19,9 +19,9 @@ set signcolumn=yes
 set autochdir
 set nonumber
 set splitright
-set guifont=Comic\ Code:h16
+set guifont=Comic\ Code:h12
 
-let s:guifontsize=16
+let s:guifontsize=12
 let s:guifont="Comic\\ Code"
 
 function! AdjustFontSize(amount)
@@ -226,8 +226,8 @@ require('scrollview').setup({
   winblend = 80,
 })
 
-vim.api.nvim_set_keymap('n', 'm', '<Plug>Lightspeed_s', {})
-vim.api.nvim_set_keymap('n', 'M', '<Plug>Lightspeed_S', {})
+vim.api.nvim_set_keymap('', 'm', '<Plug>Lightspeed_s', {})
+vim.api.nvim_set_keymap('', 'M', '<Plug>Lightspeed_S', {})
 
 vim.cmd('unmap s')
 vim.cmd('unmap S')
