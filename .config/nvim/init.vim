@@ -119,7 +119,7 @@ require'cmp'.setup {
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require'lspconfig'.pyright.setup{
     capabilities = capabilities,
@@ -229,8 +229,8 @@ require('scrollview').setup({
 vim.api.nvim_set_keymap('', 'm', '<Plug>Lightspeed_s', {})
 vim.api.nvim_set_keymap('', 'M', '<Plug>Lightspeed_S', {})
 
-vim.cmd('unmap s')
-vim.cmd('unmap S')
+--vim.cmd('unmap s')
+--vim.cmd('unmap S')
 
 EOF
 
