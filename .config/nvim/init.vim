@@ -50,6 +50,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
 Plug 'ggandor/lightspeed.nvim'
+Plug 'ojroques/vim-oscyank'
 call plug#end()
 
 "lua nvim-lsp
@@ -304,3 +305,6 @@ nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<cr>
 " For :terminal
 tnoremap <Esc> <C-\><C-n>
 map <leader>T :vsplit \| terminal<cr>
+
+" for yank ssh
+autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | OSCYankReg " | endif
