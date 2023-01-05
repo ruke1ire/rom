@@ -308,3 +308,7 @@ map <leader>T :vsplit \| terminal<cr>
 
 " for yank ssh
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | OSCYankReg " | endif
+
+" Unmap ctrl a, ctrl x
+map <C-a> <Nop>
+map <C-x> <Nop>
